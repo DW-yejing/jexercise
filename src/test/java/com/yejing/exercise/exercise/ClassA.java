@@ -6,6 +6,17 @@ public class ClassA {
     public String a;
     public String b;
 
+    public ClassA(){}
+
+    public ClassA(String a){
+        this.a = a;
+        System.out.println("ClassA initialed");
+    }
+
+    public ClassA(String a, String b){
+        this.b = b;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
