@@ -1,13 +1,9 @@
 package com.yejing.exercise.config;
 
 import org.junit.Test;
-import org.springframework.security.crypto.factory.PasswordEncoderFactories;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 import java.security.InvalidAlgorithmParameterException;
@@ -29,10 +25,9 @@ public class ATest {
         int b= staticTest.a;
     }*/
 
-    private static String iv = "0123456789ABCDEF";//偏移量字符串必须是16位 当模式是CBC的时候必须设置偏移量
+    private static String                   iv = "0123456789ABCDEF";//偏移量字符串必须是16位 当模式是CBC的时候必须设置偏移量
     private static String Algorithm = "AES";
     private static String AlgorithmProvider = Algorithm + "/ECB/PKCS5Padding"; // 算法/模式/补码方式
-    private static PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
 
     public static byte[] generatorKey() throws NoSuchAlgorithmException {
         KeyGenerator keyGenerator = KeyGenerator.getInstance(Algorithm);

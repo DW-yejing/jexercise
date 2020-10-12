@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.RandomAccess;
-
+@Service
 public class HelloWorldImpl extends ArrayList<String> implements HelloWorld, RandomAccess {
 
     @Override
